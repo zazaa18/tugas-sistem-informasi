@@ -1,0 +1,452 @@
+
+/* =================================================
+   PUSTAKA - MODERN CUSTOM STYLESHEET
+   ================================================= */
+
+/* --- Variabel Warna --- */
+:root {
+    --primary-color: #5B9BD5;
+    --primary-hover: #3D7FBA;
+    --primary-soft: #EAF4FC;
+
+    --dark-color: #263F55;
+    --text-color: #465B6C;
+    --muted-color: #8295A5;
+
+    --light-bg: #F3F8FC;
+    --white-color: #ffffff;
+    --border-color: #DFEAF3;
+
+    --card-radius: 16px;
+    --card-shadow: 0 4px 16px rgba(55, 100, 140, 0.07);
+    --card-hover-shadow: 0 12px 28px rgba(55, 100, 140, 0.13);
+
+    --transition: all 0.25s ease;
+}
+
+/* --- Tampilan Dasar --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark-color);
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+p {
+    color: var(--text-color);
+}
+
+.text-muted {
+    color: var(--muted-color) !important;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background: linear-gradient(90deg, #6CAFE5, #438BD0);
+    box-shadow: 0 3px 14px rgba(55, 100, 140, 0.15);
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: 750;
+    letter-spacing: 0.2px;
+}
+
+.navbar .nav-link {
+    color: #ffffff !important;
+    transition: var(--transition);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #EAF4FC !important;
+}
+
+.navbar .btn {
+    border-radius: 9px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+/* --- Button --- */
+.btn {
+    border-radius: 9px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 12px rgba(91, 155, 213, 0.22);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: #B8D5ED;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn-outline-secondary {
+    border-color: #D8E5F0;
+    color: #526B80;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #526B80;
+    border-color: #526B80;
+    color: #ffffff;
+}
+
+/* --- Card Umum --- */
+.card {
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: var(--white-color);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--dark-color);
+    font-weight: 700;
+    padding: 16px 20px;
+}
+
+.card-footer {
+    background-color: var(--white-color);
+    border-top: 1px solid var(--border-color);
+}
+
+/* --- Kartu Katalog Buku --- */
+.book-card {
+    height: 100%;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--card-radius) !important;
+    background-color: var(--white-color);
+    box-shadow: var(--card-shadow) !important;
+    overflow: hidden;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    border-color: #B8D5ED !important;
+    box-shadow: var(--card-hover-shadow) !important;
+}
+
+.book-card .card-body {
+    padding: 18px;
+}
+
+.book-card .card-title {
+    color: var(--dark-color);
+    font-weight: 700;
+}
+
+.book-card .card-text {
+    color: var(--muted-color);
+}
+
+/* --- Gambar Buku --- */
+.book-card img {
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover img {
+    transform: scale(1.025);
+}
+
+/* --- Badge & Status --- */
+.badge {
+    font-weight: 600;
+    padding: 0.5em 0.75em;
+    letter-spacing: 0.1px;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-primary.bg-opacity-10 {
+    background-color: var(--primary-soft) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* --- Form Controls --- */
+.form-control,
+.form-select {
+    color: var(--dark-color);
+    border: 1px solid #D7E5F0;
+    border-radius: 9px;
+    min-height: 44px;
+    transition: var(--transition);
+}
+
+.form-control::placeholder {
+    color: #9AAEBE;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #83B9E5;
+    box-shadow: 0 0 0 3px rgba(91, 155, 213, 0.15);
+}
+
+.input-group-text {
+    border-color: #D7E5F0;
+    background-color: #F5F9FD;
+}
+
+/* --- Tabel --- */
+.table {
+    --bs-table-color: var(--text-color);
+    --bs-table-bg: transparent;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.table th {
+    font-weight: 700;
+    color: #465B6C;
+    background-color: #EFF6FC;
+    border-bottom: 1px solid var(--border-color);
+    white-space: nowrap;
+    padding: 14px 16px;
+}
+
+.table td {
+    padding: 14px 16px;
+    border-color: var(--border-color);
+}
+
+.table-hover tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #F0F7FD;
+}
+
+/* --- Alert / Notifikasi --- */
+.alert {
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 14px 18px;
+}
+
+.alert-success {
+    background-color: #EDF7F0;
+    color: #267047;
+    border-color: #CCE7D4;
+}
+
+.alert-danger {
+    background-color: #FDF0EF;
+    color: #A83C36;
+    border-color: #F2CECA;
+}
+
+.alert-warning {
+    background-color: #FFF8E8;
+    color: #8A641D;
+    border-color: #F0DFB1;
+}
+
+.alert-info {
+    background-color: #EDF5FC;
+    color: #376C91;
+    border-color: #C8DFEF;
+}
+
+/* --- Modal --- */
+.modal-content {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(55, 100, 140, 0.16);
+    overflow: hidden;
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 18px 22px;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+    padding: 16px 22px;
+}
+
+.modal-title {
+    font-weight: 750;
+}
+
+/* --- Pagination --- */
+.pagination {
+    gap: 5px;
+}
+
+.page-link {
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px !important;
+    margin: 0 2px;
+}
+
+.page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* --- Link --- */
+a {
+    transition: color 0.2s ease;
+}
+
+a:not(.btn) {
+    text-underline-offset: 3px;
+}
+
+/* --- Header Banner --- */
+.hero h1,
+.hero-section h1,
+.hero-banner h1,
+.hero-content h1,
+.banner h1 {
+    color: #ffffff !important;
+}
+
+.hero p,
+.hero-section p,
+.hero-banner p,
+.hero-content p,
+.banner p {
+    color: #EAF4FC;
+}
+
+/* --- Responsif Tablet --- */
+@media (max-width: 991.98px) {
+    .card-header {
+        padding: 14px 16px;
+    }
+
+    .book-card .card-body {
+        padding: 15px;
+    }
+
+    .table th,
+    .table td {
+        padding: 12px;
+    }
+}
+
+/* --- Responsif HP --- */
+@media (max-width: 575.98px) {
+    body {
+        font-size: 14px;
+    }
+
+    .card {
+        border-radius: 14px;
+    }
+
+    .book-card .card-body {
+        padding: 14px;
+    }
+
+    .btn {
+        font-size: 0.875rem;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    .modal-content {
+        border-radius: 14px;
+    }
+}
+
+/* --- Aksesibilitas Animasi --- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* --- Print Friendly Styles --- */
+@media print {
+    .no-print,
+    nav,
+    .btn,
+    form,
+    footer {
+        display: none !important;
+    }
+
+    body {
+        background-color: #fff !important;
+        color: #000 !important;
+        display: block;
+    }
+
+    .card {
+        border: 1px solid #dee2e6 !important;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+
+    .book-card img {
+        transform: none !important;
+    }
+}
