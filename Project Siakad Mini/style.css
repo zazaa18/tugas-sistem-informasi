@@ -1,0 +1,182 @@
+/* ===== BODY & WRAPPER ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f4c81, #ffffff);
+    margin: 0;
+    padding: 30px;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: #1565c0;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ===== CARD ===== */
+.profile-card,
+.khs-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+/* ===== JUDUL ===== */
+.profile-card h2,
+.khs-card h2 {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ===== DATA MAHASISWA ===== */
+.data-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.label {
+    width: 140px;
+    font-weight: normal;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.separator {
+    width: 10px;
+    text-align: center;
+}
+
+.data-row span.value {
+    flex: 1;
+    text-align: left;
+    color: black;
+}
+
+/* ===== FORM INPUT ===== */
+.profile-card form input,
+.khs-card form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #b0c4de;
+    box-sizing: border-box;
+}
+
+/* Tombol submit */
+.profile-card form button,
+.khs-card form button {
+    margin-top: 10px;
+    width: auto;
+    padding: 10px 20px;
+}
+
+/* Form input nilai sejajar */
+.form-inline {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* ===== TABEL KHS ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #90caf9;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #1565c0;
+    color: white;
+}
+
+.mk-name {
+    text-align: left;
+    padding-left: 15px;
+}
+
+/* ===== SUMMARY ===== */
+.summary {
+    margin-top: 15px;
+}
+
+.ipk {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1565c0;
+}
+
+/* ===== TOMBOL ===== */
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    background: #1565c0;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* ===== PRINT KHUSUS CETAK KHS ===== */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+        margin: 0;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    .khs-card,
+    .khs-card * {
+        visibility: visible;
+    }
+
+    .khs-card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .button-group {
+        display: none;
+    }
+}

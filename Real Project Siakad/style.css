@@ -1,0 +1,233 @@
+body{
+    font-family: Arial, sans-serif;
+    background:#fff7fa;
+    margin:0;
+    padding:25px;
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+    background:#ffffff;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    background:#f8bbd0;
+    color:white; /* diubah jadi putih */
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:35px;
+}
+
+.header h1{
+    margin:0;
+    font-size:30px;
+    font-weight:bold;
+    color:white; /* diubah jadi putih */
+}
+
+.kampus-text{
+    margin-top:8px;
+    font-size:16px;
+    color:white; /* diubah jadi putih */
+    font-weight:500;
+}
+
+/* SUB JUDUL */
+h2{
+    color:black; /* diubah jadi hitam */
+    margin-top:35px;
+    margin-bottom:18px;
+}
+
+/* FORM CARD */
+.form-card{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    background:#fce4ec;
+    padding:25px;
+    border-radius:10px;
+    margin-bottom:30px;
+
+    /* biar tombol ga melebar */
+    align-items:flex-start;
+}
+
+/* FORM GROUP */
+.form-group{
+    display:grid;
+    grid-template-columns:180px 30px 1fr;
+    align-items:center;
+    column-gap:18px;
+    row-gap:10px;
+    margin-bottom:18px;
+    width:100%;
+}
+
+.form-group label{
+    font-weight:bold;
+    color:#5c2a3d;
+    font-size:15px;
+}
+
+/* TITIK DUA */
+.colon{
+    text-align:center;
+    font-weight:bold;
+    color:#5c2a3d;
+    font-size:18px;
+}
+
+/* INPUT */
+.form-group input,
+.form-group select{
+    padding:10px 12px;
+    border-radius:6px;
+    border:1px solid #f8bbd0;
+    font-size:14px;
+    width:100%;
+    box-sizing:border-box;
+    background:white;
+    min-height:42px;
+}
+
+/* TOMBOL (KECIL) */
+button{
+    padding:10px 20px;
+    background:#f48fb1;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+    width:auto;
+    font-weight:500;
+    display:inline-block;
+}
+
+button:hover{
+    background:#ec407a;
+}
+
+/* RESET BUTTON */
+.reset-btn{
+    background:#f48fb1;
+}
+
+.reset-btn:hover{
+    background:#ec407a;
+}
+
+/* PRINT BUTTON */
+.print-btn{
+    margin-top:20px;
+    background:#f06292;
+}
+
+.print-btn:hover{
+    background:#d81b60;
+}
+
+/* GROUP TOMBOL (SEJAJAR) */
+.button-group{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+.button-group button{
+    flex:none;
+}
+
+/* INFO KHS */
+.info-khs{
+    margin-top:20px;
+    margin-bottom:20px;
+    line-height:2;
+    color:#5c2a3d;
+    font-size:15px;
+}
+
+.info-khs p{
+    margin:6px 0;
+}
+
+/* TABEL */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+th{
+    background:#f8bbd0;
+    color:#5c2a3d;
+    font-weight:bold;
+}
+
+td, th{
+    border:1px solid #f8bbd0;
+    padding:12px;
+    text-align:center;
+}
+
+/* GARIS */
+hr{
+    border:0;
+    border-top:1px solid #f8bbd0;
+    margin:25px 0;
+}
+
+/* ================= TAMBAHAN KHS ================= */
+
+/* biar IPK & dosen wali sejajar */
+.footer-khs{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-top:15px;
+}
+
+/* kiri (IPK) */
+.ipk{
+    font-weight:bold;
+    color:#5c2a3d;
+}
+
+/* kanan (dosen wali) */
+.dosen-wali{
+    text-align:right;
+    color:#5c2a3d;
+}
+
+/* ================= PRINT ================= */
+
+@media print {
+
+    body * {
+        visibility: hidden;
+    }
+
+    .khs-area, .khs-area * {
+        visibility: visible;
+    }
+
+    .khs-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .print-btn {
+        display: none;
+    }
+}
